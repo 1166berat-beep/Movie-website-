@@ -1,0 +1,25 @@
+BESTIEMOVIE - KURULUM
+
+HIZLI TEST (bu bilgisayarda)
+  test-baslat.bat dosyasına çift tıklayın. Site http://localhost:3000 adresinde açılır.
+  (Pakette sadece localhost için çalışan bir TEST lisansı vardır.)
+
+GERÇEK SİTE İÇİN
+  1) lisans-olustur.bat -> alan adınızı yazın (örn: siteniz.com,www.siteniz.com).
+     Bu, SİZE ÖZEL gizli anahtar üretir (anahtarlar/private.pem) ve yeni license.js yazar.
+     Gizli anahtarı kimseyle paylaşmayın, sunucuya yüklemeyin, yedeğini alın.
+  2) Sunucuya sadece şunları yükleyin (aynı klasörde):
+       index.html, ui.js, loader.js, app.js, license.js
+     anahtarlar/, kaynak/, tools/ yüklenmez.
+  3) Alan adına PORT yazılmaz (localhost:3000 değil, localhost).
+     www'lu ve www'suz adresleri ayrı ayrı yazın.
+  4) Dosyaları değiştirdikten sonra tarayıcıda Ctrl+F5 ile yenileyin (eski sürüm önbellekte kalabilir).
+
+TASARIMI DEĞİŞTİRMEK
+  kaynak/site.html dosyasını düzenleyin, sonra:  node tools/build-ui.mjs
+
+file:// ile (çift tıklayıp) açılırsa lisans reddedilir; bunun için test-baslat.bat kullanın.
+
+NOT: Bu sistem sıradan kopyalamayı ve başka alan adında kullanmayı engeller. Kodu okuyup
+doğrulamayı silebilen biri için tek gerçek koruma, üyelik/ödeme/plan kontrolünü sunucuda
+yapmaktır.
